@@ -1,0 +1,24 @@
+// this is like a metodo in JS that we can use all across the scss using its values; 
+@mixin flexCenter($direction, $background) {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+    background: $background;
+}
+header{
+    //includes the metodo
+    @include flexCenter(column,blue);
+    background: blue;
+    height: 100vh;
+    color: $textColor;
+    
+
+    button{
+        background: $primaryBnt;
+        &:hover{
+            background:rgb(62, 194, 35);
+        };
+    }
+}
